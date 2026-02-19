@@ -1,0 +1,27 @@
+{
+  "name": "interactive-monster",
+  "version": "1.0.0",
+  "description": "An interactive SVG monster with eye-tracking effects",
+  "main": "monster.js",
+  "scripts": {
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "format:check": "prettier --check \"**/*.{js,css,html,md}\"",
+    "serve": "npx serve .",
+    "prepare": "npm run format && npm run lint"
+  },
+  "keywords": [
+    "svg",
+    "interactive",
+    "animation",
+    "eye-tracking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5"
+  }
+}
