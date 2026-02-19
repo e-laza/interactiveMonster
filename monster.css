@@ -4,6 +4,14 @@ html, body {
   background: black;
 }
 
+.stroke {
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round; 
+  stroke-linejoin: round;
+}
+
 .scene {
   position: relative;
   height: 100vh;
@@ -25,35 +33,18 @@ svg {
   touch-action: none;
 }
 
-/* ---- Star Background ---- */
-
-.stars {
-  position: absolute;
-  inset: -20%;
-  background-repeat: repeat;
-  animation: drift linear infinite;
-  z-index: 1;
+svg [id^="EYE_IRIS_"] {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
 }
 
-.s1 {
-  background-size: 200px 200px;
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, white 60%, transparent 61%),
-    radial-gradient(1px 1px at 150px 120px, white 60%, transparent 61%);
-  animation-duration: 100s;
-  opacity: 0.8;
-}
-
-.s2 {
-  background-size: 140px 140px;
-  background-image:
-    radial-gradient(1px 1px at 40px 60px, white 60%, transparent 61%),
-    radial-gradient(1px 1px at 100px 30px, white 60%, transparent 61%);
-  animation-duration: 160s;
-  opacity: 0.5;
-}
-
-@keyframes drift {
-  from { transform: translate(0,0); }
-  to { transform: translate(-200px,-120px); }
+.content object,
+.content embed {
+  width: 70%;
+  max-width: 500px;
+  height: auto;
+  user-select: none;
+  touch-action: none;
+  display: block;
 }
